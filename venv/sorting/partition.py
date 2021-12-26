@@ -1,11 +1,11 @@
 def partition_two_pointers(arr):
     left = 1
     right = len(arr) - 1
-    pivot_val = arr[0]
+    key = arr[0]
     while left < right:
-        while left < len(arr) and arr[left] <= pivot_val:
+        while left < len(arr) and arr[left] <= key:
             left += 1
-        while right >= 0 and arr[right] > pivot_val :
+        while right >= 0 and arr[right] > key :
             right -= 1
         if left < right:
             arr[left], arr[right] = arr[right], arr[left]
